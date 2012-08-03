@@ -1,0 +1,9 @@
+
+.navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: auto;
+    margin: 0 10px;
+}
+
+.container-fluid{
+    margin-top: 40px;
+}
