@@ -1,0 +1,28 @@
+
+.navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    
+}
+
+.navbar-inner{
+    min-height: 34px;
+}
+
+.navbar .divider-vertical{
+    height: 34px;
+}
+
+.navbar .nav > li > a {
+    padding: 6px 10px 9px;
+}
+.navbar .brand {
+    padding: 6px 20px 9px;
+}
+
+.main{
+    margin-top: 40px;
+}
+
+.hello-user{
+    padding-top: 7px;
+    color: #D0D0D0;
+}

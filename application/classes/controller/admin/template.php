@@ -2,7 +2,7 @@
 
 abstract class Controller_Admin_Template extends Controller_Template {
     
-    public $template = 'default';
+    public $template = 'admin';
     
     
     public $title      = NULL;

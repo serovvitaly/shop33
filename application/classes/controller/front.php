@@ -1,14 +1,32 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Front extends Controller {
-
-    protected $_route = NULL;
+abstract class Controller_Front extends Controller_Template {
     
-	public function action_main()
-	{
-        $this->_route = $this->request->param('route');
+    public $template = 'default';
+    
+    
+    public $title      = NULL;
+    public $topmenu    = NULL;
+    public $content    = NULL;
+    public $floatside  = NULL;
+    
+    
+    public function before()
+    {
+        $this->template = 'admin/layouts/' . $this->template;
         
-		$this->response->body('hello, world! - ' . $this->_route);
-	}
+        parent::before();
+    }
+    
+    public function after()
+    {
+        $this->template->title     = $this->title;
+        $this->template->topmenu   = View::factory('common/topmenu');
+        $this->template->content   = $this->content;
+        $this->template->floatside = View::factory('admin/common/floatside');
+        
+        parent::after();
+    }
 
 } // End
+

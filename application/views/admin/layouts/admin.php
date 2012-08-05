@@ -10,16 +10,19 @@
   <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap-responsive.min.css">
   <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
   
-  <link rel="stylesheet" type="text/css" href="/skins/default/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/lib/admin/css/style.css">
   
 </head>
 <body>
   <?=$topmenu?>
   
   
-  <div class="container main">
-    <div class="row">
-      <div class="span12">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+        <?=$floatside?>
+      </div>
+      <div class="span10">
         <?=$content?>
       </div>
     </div>
