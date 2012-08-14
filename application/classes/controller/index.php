@@ -4,11 +4,11 @@ class Controller_Index extends Controller_Front {
 
     protected $_route = NULL;
     
-    public function action_main()
+    public function action_index()
     {
         $this->_route = $this->request->param('route');
         
-        $this->content = 'hello, world! - ' . $this->_route;
+        $this->content = View::factory('merchant/header');;
         
     }
 

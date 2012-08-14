@@ -11,15 +11,24 @@ class Controller_Auth extends Controller_Main {
         
         if ($login AND $pass) {
             if (Auth::instance()->login($login, $pass)) {
-                $this->request->redirect('/');
+                
+                if (Auth::instance()->get_user()->type == 'merchant') {
+                    $this->request->redirect('/merchant/');
+                }
+                else {
+                    $this->request->redirect('/');
+                }
+                
             }
             else {
                 $message = 'Не удалось авторизоваться';
             }
         }
         
-        $view = View::factory('layouts/default', array(
-            'content' => View::factory('common/login', array('message'=>$message))
+        $view = View::factory('admin/layouts/default', array(
+            'content' => View::factory('common/login', array('message'=>$message)),
+            'title' => NULL,
+            'topmenu' => NULL,
         ));
         
         $this->response->body($view);

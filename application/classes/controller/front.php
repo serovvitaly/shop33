@@ -13,7 +13,7 @@ abstract class Controller_Front extends Controller_Template {
     
     public function before()
     {
-        $this->template = 'admin/layouts/' . $this->template;
+        $this->template = 'layouts/' . $this->template;
         
         parent::before();
     }

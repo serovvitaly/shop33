@@ -98,7 +98,7 @@ Kohana::$config->attach(new Config_File);
  */
 Kohana::modules(array(
 	 'auth'       => MODPATH.'auth',       // Basic authentication
-	 'cache'      => MODPATH.'cache',      // Caching with multiple backends
+	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	 'database'   => MODPATH.'database',   // Database access
 	// 'image'      => MODPATH.'image',      // Image manipulation
@@ -111,7 +111,7 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('auth', 'auth(/<action>)')
+/*Route::set('auth', 'auth(/<action>)')
     ->defaults(array(
         'controller' => 'auth',
         'action'     => 'index',
@@ -126,6 +126,12 @@ Route::set('main', '(<route>)', array('route'=>'.*'))
     ->defaults(array(
         'controller' => 'index',
         'action'     => 'main',
+    ));*/
+Route::set('merchant', 'merchant(/<controller>(/<action>(/<id>)))')
+    ->defaults(array(
+        'directory'  => 'merchant',
+        'controller' => 'index',
+        'action'     => 'index',
     ));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(

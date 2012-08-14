@@ -1,0 +1,14 @@
+
+.navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: auto;
+    margin: 0 10px;
+}
+
+.container-fluid{
+    margin-top: 60px;
+}
+
+.hello-user{
+    padding-top: 10px;
+    color: #D0D0D0;
+}

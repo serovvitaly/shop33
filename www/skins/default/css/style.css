@@ -1,4 +1,8 @@
 
+body{
+    background-color: #F2F0F0;
+}
+
 .navbar-fixed-top .container, .navbar-fixed-bottom .container {
     
 }
@@ -25,4 +29,13 @@
 .hello-user{
     padding-top: 7px;
     color: #D0D0D0;
+}
+
+.catalog .span2, .medium_panel .span4{
+    height: 140px;
+    background-color: #E4DEDE;
+    margin-bottom: 10px;
+}
+.catalog .span2:hover, .medium_panel .span4:hover{
+    background-color: #D9CECE;
 }
