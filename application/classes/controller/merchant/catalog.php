@@ -12,7 +12,8 @@ class Controller_Merchant_Catalog extends Controller_Merchant {
     
         $this->saver('good');
          
-        $this->template->content = View::factory('merchant/catalog/good_add');
+        //$this->template->content = View::factory('merchant/catalog/good_add');
+        $this->template->content = Saver::factory('good');
     }
 
 } // End
